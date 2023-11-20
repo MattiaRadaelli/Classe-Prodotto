@@ -1,0 +1,41 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Classe_Prodotto
+{
+    class Prodotto
+    {
+        protected string _nome = "ciao";
+        protected double _prezzo = 2;
+        public Prodotto(string nome, double prezzo)
+        {
+            _nome = nome;
+            _prezzo = prezzo;
+        }
+        public Prodotto()
+        {
+
+            _nome = "Carne";
+            _prezzo = 15;
+        }
+
+        public void Stampa()
+        {
+            Console.WriteLine($"Il nome del prodotto è: {_nome} e il suo prezzo è: {_prezzo}");
+        }
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Prodotto prod = new Prodotto("Farro", 10);
+            prod.Stampa();
+            Prodotto prod1 = new Prodotto();
+            prod1.Stampa();
+        }
+    }
+}

@@ -8,8 +8,8 @@ namespace Classe_Prodotto
 {
     class Prodotto
     {
-        protected string _nome = "ciao";
-        protected double _prezzo = 2;
+        protected string _nome;
+        protected double _prezzo;
         public Prodotto(string nome, double prezzo)
         {
             _nome = nome;
@@ -17,11 +17,9 @@ namespace Classe_Prodotto
         }
         public Prodotto()
         {
-
             _nome = "Carne";
             _prezzo = 15;
         }
-
         public void Stampa()
         {
             Console.WriteLine($"Il nome del prodotto è: {_nome} e il suo prezzo è: {_prezzo}");
